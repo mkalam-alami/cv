@@ -1,0 +1,28 @@
+{
+  "name": "cv",
+  "version": "1.0.0",
+  "description": "CV",
+  "private": true,
+  "scripts": {
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mkalam-alami/cv.git"
+  },
+  "author": "Marwane Kalam-Alami",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/mkalam-alami/cv/issues"
+  },
+  "homepage": "https://github.com/mkalam-alami/cv#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "@webpack-cli/init": "^1.0.3",
+    "ts-loader": "^8.0.10",
+    "typescript": "^4.0.5",
+    "vue": "^2.6.12",
+    "webpack": "^5.4.0",
+    "webpack-cli": "^4.2.0"
+  }
+}

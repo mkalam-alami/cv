@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>Marwane Kalam-Alami</title>
+  <meta charset="utf-8" />
+  <meta lang="fr-FR" />
+  <link rel="stylesheet" href="https://unpkg.com/reset-css/reset.css" />
+  <link rel="stylesheet" href="index.css" />
+</head>
+
+<body>
+  <div id="app" v-cloak>
+    <header>
+      <div id="banner">
+        <img id="logo" src="./images/avatar.jpg">
+      </div>
+      <h1>Marwane Kalam-Alami</h1>
+    </header>
+    <section id="menu">
+      <button class="tab-btn active">Portfolio</button>
+      <button class="tab-btn">Parcours</button>
+    </section>
+    <main>
+      <Portfolio></Portfolio>
+    </main>
+
+  </div>
+
+
+  <div id="Portfolio">
+    <ul class="tab-portfolio">
+      <li v-for="entry in folio" class="entry-portfolio">
+        {{ entry.title }}
+      </li>
+    </ul>
+  </div>
+
+  <script src="dist/bundle.js"></script>
+</body>
+
+</html>
