@@ -1,12 +1,12 @@
 import Vue from "vue";
 import AppDataFolio from "./data-folio";
 
-Vue.component('Portfolio', {
+export default{
 
-  el: '#Portfolio',
+  template: document.getElementById('Portfolio').outerHTML,
 
   data: () => ({
     folio: AppDataFolio
   })
   
-});
+};

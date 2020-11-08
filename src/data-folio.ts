@@ -309,7 +309,7 @@ add({
     description: 'Site d\'actualité et encyclopédie, principalement dédié à la saga de jeux vidéo "Final Fantasy". Laissé à l\'abandon depuis 2008.',
     tech: 'PHP + MySQL'
 });
-
+/*
 add({
     title: 'Silex Wan',
     type: 'Musique',
@@ -319,6 +319,6 @@ add({
     description: 'Silex Wan est un petit projet musical orienté électro.',
     tech: 'Propellerhead Reason',
     noTitle: true
-});
+});*/
 
 export default AppDataFolio;

@@ -10,30 +10,43 @@
 </head>
 
 <body>
+
   <div id="app" v-cloak>
     <header>
       <div id="banner">
-        <img id="logo" src="./images/avatar.jpg">
+        <img id="logo" src="./images/logo.jpg">
       </div>
       <h1>Marwane Kalam-Alami</h1>
     </header>
     <section id="menu">
-      <button class="tab-btn active">Portfolio</button>
-      <button class="tab-btn">Parcours</button>
+      <router-link to="/" class="tab-btn">Portfolio</router-link>
+      <router-link to="/parcours" class="tab-btn">Parcours</router-link>
     </section>
     <main>
-      <Portfolio></Portfolio>
+      <router-view></router-view>
     </main>
-
+    <footer>
+      Personal page made with <a href="https://vuejs.org/">VueJS</a>, sources available on <a href="https://github.com/mkalam-alami/cv">Github</a>. Social icons from <a href="https://www.iconfinder.com/iconsets/free-social-media-set">Free social media set icon set</a> by <a href="https://www.axialis.com/">Axialis</a>.</href>
+    </footer>
   </div>
 
+  <div style="display: none">
+    <div id="Portfolio">
+      <ul class="tab-portfolio">
+        <li v-for="entry in folio" class="entry-portfolio">
+          <a :href="entry.url">
+            <img :src="'images/folio/' + entry.picture" />
+            <div class="link">{{ entry.title }}</div>
+            <div class="tags">{{ entry.type }} | {{ entry.date }}</div>
+            <div class="description">{{ entry.description }}</div>
+          </a>
+        </li>
+      </ul>
+    </div>
 
-  <div id="Portfolio">
-    <ul class="tab-portfolio">
-      <li v-for="entry in folio" class="entry-portfolio">
-        {{ entry.title }}
-      </li>
-    </ul>
+    <div id="Parcours">
+      coucou
+    </div>
   </div>
 
   <script src="dist/bundle.js"></script>

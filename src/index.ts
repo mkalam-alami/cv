@@ -1,12 +1,22 @@
 import Vue from "vue";
-import "./portfolio";
+import VueRouter from "vue-router";
 
-new Vue({
+import Portfolio from "./portfolio";
+import Parcours from "./parcours";
 
-  el: '#app',
+Vue.use(VueRouter);
 
-  data: {
-    name: "coucou"
-  }
+const routes = [
+  { path: '/', component: Portfolio },
+  { path: '/parcours', component: Parcours }
+]
 
+const router = new VueRouter({
+  routes
+})
+
+const vue = new Vue({
+  router
 });
+
+vue.$mount('#app');
